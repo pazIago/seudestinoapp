@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  padding: 0;
+  color: aliceblue;
+  background-color: black;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-size: 1.125rem;
+}
+
+img {
+  display: block;
+  width: 150px;
+  height: 150px;
+  justify-self: center;
+}
+
+input,
+button {
+  display: block;
+}
+
+h1,
+p {
+  margin: 0 auto;
+  padding: 0;
+  width: max-content;
+}
+
+.container {
+  display: grid;
+  gap: 20px;
+  width: max-content;
+  margin: auto auto;
+  margin-top: 10%;
+}
+
+
+
+h1 {
+  width: max-content;
+  font-size: 2rem;
+}
+
+p {
+  text-align: center;
+  width: 40ch;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.form {
+  display: grid;
+  gap: 12px;
+  width: 100%;
+}
+
+#pergunta {
+  box-sizing: border-box;
+  background-color: white;
+  border: none;
+  border-radius: 4px;
+  line-height: 4;
+  width: 100%;
+  padding: 0 8px;
+  font-size: 1.125rem;
+}
+
+#pergunta:focus, textarea {
+  outline:none;
+}
+
+#button {
+  box-sizing: border-box;
+  background-color: blueviolet;
+  font-weight: 500;
+  font-size: 1.125rem;
+  border: none;
+  border-radius: 4px;
+  color: aliceblue;
+  line-height: 3.5;
+  cursor: pointer;
+}
+
+#button:hover {
+  filter: brightness(110%);
+}
+
+span {
+  font-size: 1.125rem;
+  margin-top: 20px;
+  text-align: center;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+span.ativo {
+  opacity: 1;
+}
