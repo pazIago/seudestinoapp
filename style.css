@@ -5,7 +5,7 @@ body {
   background-color: black;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    font-size: 1.125rem;
+  font-size: 1.125rem;
 }
 
 img {
@@ -35,17 +35,14 @@ p {
   margin-top: 10%;
 }
 
-
-
 h1 {
-  width: max-content;
-  font-size: 2rem;
+   font-size: 2rem;
 }
 
 p {
   text-align: center;
-  width: 40ch;
   font-size: 1rem;
+  width: 30ch;
   color: rgba(255, 255, 255, 0.5);
 }
 
@@ -66,8 +63,9 @@ p {
   font-size: 1.125rem;
 }
 
-#pergunta:focus, textarea {
-  outline:none;
+#pergunta:focus,
+textarea {
+  outline: none;
 }
 
 #button {
@@ -96,4 +94,10 @@ span {
 
 span.ativo {
   opacity: 1;
+}
+
+@media (max-width: 700px) {
+  h1 {
+    font-size: 1.5rem;
+  }
 }
