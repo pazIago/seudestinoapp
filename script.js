@@ -3,52 +3,38 @@ const resposta = document.querySelector("span");
 const button = document.getElementById("button");
 
 function setAnswer() {
-  rng = parseInt(Math.random() * 10 + 1);
+  rng = parseInt(Math.random() * 10);
+
   let texto = "texto base";
-  switch (rng) {
-    case 1:
-      texto = "Talvez sim.";
-      break;
-    case 2:
-      texto = "Talvez não.";
-      break;
-    case 3:
-      texto = "Tudo indica que sim.";
-      break;
-    case 4:
-      texto = "Tudo indica que não.";
-      break;
-    case 5:
-      texto = "Se o universo quiser, será.";
-      break;
-    case 6:
-      texto = "Um dia, talvez.";
-      break;
-    case 7:
-      texto = "O Universo conspira contra.";
-      break;
-    case 8:
-      texto = "Com certeza.";
-      break;
-    case 9:
-      texto = "De forma alguma.";
-      break;
-    case 10:
-      texto = "Em breve.";
-      break;
-  }
-  resposta.innerText = texto;
+
+  const respostas = {
+    0: "Talvez sim.",
+    1: "Talvez não.",
+    2: "Tudo indica que sim.",
+    3: "Tudo indica que não.",
+    4: "Se o universo quiser, será.",
+    5: "Um dia, talvez.",
+    6: "O Universo conspira contra.",
+    7: "Com certeza.",
+    8: "De forma alguma.",
+    9: "Em breve.",
+  };
+
+  const respostasArray = Object.values(respostas);
+  texto = respostasArray[rng];
+  resposta.innerText = texto
 }
 
 function showAnswer() {
   const isQuestion = pergunta.value.includes("?");
-  console.log(isQuestion)
-  if (isQuestion) { setAnswer()
+  if (isQuestion) {
+    setAnswer();
   } else {
     resposta.innerText = "Foco. Isto não é uma pergunta.";
   }
   resposta.classList.add("ativo");
   setTimeout(() => resposta.classList.remove("ativo"), 5000);
+  pergunta.value = "";
 }
 
 button.addEventListener("click", showAnswer);
